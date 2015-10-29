@@ -93,7 +93,7 @@
                 </div>
             </div>
             <div class="row">
-                {% for product in products|sortdesc:'order' %}
+                {% for product in products|sortasc:'order' %}
                 <div class="col-sm-4 products-item">
                     <a href="#productModal{{product.name}}" class="products-link" data-toggle="modal">
                         <div class="caption">
