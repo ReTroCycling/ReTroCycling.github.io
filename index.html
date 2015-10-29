@@ -5,19 +5,19 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ site.description }}">
-    <meta name="author" content="{{ site.author }}">
+    <meta name="description" content="What a description!">
+    <meta name="author" content="Lukas Winkler">
 
-    <title>{{ site.title }}</title>
+    <title>ReTroCycling</title>
 
     <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
-    <link href="{{site_root}}css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="{{site_root}}css/retrocycling.css" rel="stylesheet">
+    <link href="css/retrocycling.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="{{site_root}}font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -39,7 +39,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand no-text-tf" href="#page-top">{{site.title}}</a>
+                <a class="navbar-brand no-text-tf" href="#page-top">ReTroCycling</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -70,11 +70,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <img class="img-responsive" src="{{site_root}}{{site.logo}}" alt="Site Logo">
+                    <img class="img-responsive" src="img/profile.png" alt="Site Logo">
                     <div class="intro-text">
-                        <span class="name">{{site.title}}</span>
+                        <span class="name">ReTroCycling</span>
                         <hr class="star-light">
-                        <span class="description">{{site.description}}</span>
+                        <span class="description">What a description!</span>
                     </div>
                 </div>
             </div>
@@ -91,29 +91,29 @@
                 </div>
             </div>
             <div class="row">
-                {% for product in products|sortdesc:'order' %}
+                
                 <div class="col-sm-4 products-item">
-                    <a href="#productModal{{product.name}}" class="products-link" data-toggle="modal">
+                    <a href="#productModalplaceholder2" class="products-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="{{product.img}}" class="img-responsive" alt="{{product.img_alt}}">
+                        <img src="img/products/cake.png" class="img-responsive" alt="placeholder2 image">
                     </a>
                 </div>
-                {% empty %}
+                
                 <div class="col-sm-4 products-item">
-                    <a href="#productModal{{product.name}}" class="products-link" data-toggle="modal">
+                    <a href="#productModalplaceholder" class="products-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="{{product.img}}" class="img-responsive" alt="{{product.img_alt}}">
+                        <img src="img/products/game.png" class="img-responsive" alt="placeholder image">
                     </a>
                 </div>
-                {% endfor %}
+                
             </div>
         </div>
     </section>
@@ -198,8 +198,8 @@
                         </ul>
                     </div>
                     <div class="footer-col col-md-4">
-                        <h3>About {{site.title}}</h3>
-                        <p>{{site.description}}</p>
+                        <h3>About ReTroCycling</h3>
+                        <p>What a description!</p>
                     </div>
                 </div>
             </div>
@@ -208,7 +208,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        Copyright &copy; {{site.title}} 2015
+                        Copyright &copy; ReTroCycling 2015
                     </div>
                 </div>
             </div>
@@ -223,8 +223,8 @@
     </div>
 
     <!-- Products Modals -->
-    {% for product in products %}
-    <div class="products-modal modal fade" id="productModal{{product.name}}" tabindex="-1" role="dialog" aria-hidden="true">
+    
+    <div class="products-modal modal fade" id="productModalplaceholder2" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
@@ -236,10 +236,20 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>{{product.name}}</h2>
+                            <h2>placeholder2</h2>
                             <hr class="star-primary">
-                            <img src="{{product.img}}" class="img-responsive img-centered" alt="{{product.img_alt}}">
-                            {{product|markdown_to_html}}
+                            <img src="img/products/cake.png" class="img-responsive img-centered" alt="placeholder2 image">
+                            <p>Use this space to describe product in markdown.</p>
+
+<p>This has several advantages:</p>
+
+<ul>
+<li>markdown syntax</li>
+<li>easier expansion</li>
+</ul>
+
+<p>Some additional <strong>bold</strong> and <em>cursive</em> text.</p>
+
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
@@ -247,18 +257,50 @@
             </div>
         </div>
     </div>
-    {% endfor %}
+    
+    <div class="products-modal modal fade" id="productModalplaceholder" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>placeholder</h2>
+                            <hr class="star-primary">
+                            <img src="img/products/game.png" class="img-responsive img-centered" alt="placeholder image">
+                            <p>Use this space to describe product in markdown.</p>
+
+<p>This has several advantages:</p>
+
+<ul>
+<li>markdown syntax</li>
+<li>easier expansion</li>
+</ul>
+
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
 
     <!-- jQuery -->
-    <script src="{{site_root}}js/jquery.js"></script>
+    <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="{{site_root}}js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="{{site_root}}js/retrocycling.js"></script>
+    <script src="js/retrocycling.js"></script>
   </body>
 </html>
