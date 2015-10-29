@@ -212,7 +212,9 @@
                             <h2>{{product.name}}</h2>
                             <hr class="star-primary">
                             <img src="{{product.img}}" class="img-responsive img-centered" alt="{{product.img_alt}}">
-                            {{product|markdown_to_html}}
+                            <div class="product-modal-description">
+                                {{product|markdown_to_html}}
+                            </div>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
