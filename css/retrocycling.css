@@ -17,6 +17,7 @@ a:active,
 a.active {
     outline: 0;
     color: #18bc9c;
+    text-decoration: none;
 }
 
 h1,
@@ -213,7 +214,6 @@ section.success a.active {
     width: 100%;
     height: 100%;
     opacity: 0;
-    background: rgba(24,188,156,.9);
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     transition: all ease .5s;
@@ -225,21 +225,19 @@ section.success a.active {
 
 #products .products-item .products-link .caption .caption-content {
     position: absolute;
-    top: 50%;
-    width: 100%;
-    height: 20px;
-    margin-top: -12px;
+    bottom: 2px;
+    right: 2px;
     text-align: center;
-    font-size: 20px;
-    color: #fff;
+    font-size: 15px;
+    color: black;
 }
 
 #products .products-item .products-link .caption .caption-content i {
     margin-top: -12px;
 }
 
-#products .products-item .products-link .caption .caption-content h3,
-#products .products-item .products-link .caption .caption-content h4 {
+#products .products-item .products-link h3,
+#products .products-item .products-link h4 {
     margin: 0;
 }
 
