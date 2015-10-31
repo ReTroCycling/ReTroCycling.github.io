@@ -178,6 +178,12 @@ section.success {
     background: #18bc9c;
 }
 
+section.success {
+    color: #fff;
+    background: #18bc9c;
+}
+
+
 section.success a,
 section.success a:hover,
 section.success a:focus,
@@ -254,7 +260,6 @@ section.success a.active {
 }
 
 .btn-outline {
-    margin-top: 15px;
     border: solid 2px #fff;
     font-size: 20px;
     color: #fff;
@@ -266,9 +271,21 @@ section.success a.active {
 .btn-outline:focus,
 .btn-outline:active,
 .btn-outline.active {
-    border: solid 2px #fff;
     color: #18bc9c;
     background: #fff;
+}
+
+#team .btn-outline {
+    color: #18bc9c;
+    border: solid 2px #18bc9c;
+}
+
+#team .btn-outline:hover,
+#team .btn-outline:focus,
+#team .btn-outline:active,
+#team .btn-outline.active {
+    color: #fff;
+    background: #18bc9c;
 }
 
 .floating-label-form-group {
@@ -409,4 +426,9 @@ footer .footer-below {
 
 .no-text-tf {
     text-transform: none;
+}
+
+.team-member {
+    margin-bottom:50px;
+    text-align: center;
 }

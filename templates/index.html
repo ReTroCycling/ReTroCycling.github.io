@@ -54,7 +54,9 @@
                     <li class="page-scroll">
                         <a href="#about">About</a>
                     </li>
-                    <!-- TODO Team section -->
+                    <li class="page-scroll">
+                        <a href="#team">Team</a>
+                    </li>
                     <!--
                     <li class="page-scroll">
                         <a href="#contact">Contact</a>
@@ -130,7 +132,36 @@
         </div>
     </section>
 
-    <!-- TODO Team Section -->
+    <section id="team">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Our amazing Team</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                {% for member in team.members|sortasc:'name' %}
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="{{member.img}}" class="img-responsive img-circle center-block" alt="{{member.name}} picture">
+                        <h4>{{member.name}}</H4>
+                        <p class="text-muted">{{member.role}}</p>
+                        {% if member.social %}
+                        <ul class="list-inline social-buttons">
+                            {% for icon, link in member.social %}
+                            <li>
+                                <a href="{{link}}" class="btn-social btn-outline"><i class="fa fa-fw fa-{{icon}}"></i></a>
+                            </li>
+                            {% endfor %}
+                       </ul>
+                       {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="text-center">
@@ -149,7 +180,7 @@
                         </p>
                     </div>
                     <div class="footer-col col-md-4">
-                        <h3>Around the Web!</h3>
+                        <h3>Around the Web</h3>
                         <ul class="list-inline">
                             {% for icon, link in site.social %}
                             <li>

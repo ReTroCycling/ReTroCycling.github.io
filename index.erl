@@ -2,9 +2,10 @@
 
 data(_) ->
     #{
-      site        => {eterm,    "site.config"},
-      products    => {markdown, "products/*.md"}
-     }.
+      site     => {eterm, "site.config"},
+      team     => {eterm, "team.config"},
+      products => {markdown, "products/*.md"}
+    }.
 
 site(Data) ->
     #{
@@ -15,6 +16,8 @@ site(Data) ->
           {files, "assets/img/*.png"},
       "site/img/products/*.png" =>
           {files, "assets/img/products/*.png"},
+      "site/img/team/*.png" =>
+          {files, "assets/img/team/*.png"},
       "site/css/*.css" =>
           {files, "assets/css/*.css"},
       "site/font-awesome/css/font-awesome.min.css" =>
