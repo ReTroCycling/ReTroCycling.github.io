@@ -429,6 +429,10 @@ footer .footer-below {
 }
 
 .team-member {
-    margin-bottom:50px;
+    margin-bottom: 50px;
     text-align: center;
+}
+
+.team-member h4{
+    margin-bottom: 0px;
 }
