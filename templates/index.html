@@ -104,7 +104,7 @@
                             </div>
                         </div>
                         <h4 class="text-center">{{product.name}}</h4>
-                        <img src="{{product.img}}" class="img-responsive" alt="{{product.img_alt}}">
+                        <img src="{{site_root}}{{product.img}}" class="img-responsive" alt="{{product.name}}">
                     </a>
                 </div>
                 {% endfor %}
@@ -144,7 +144,7 @@
                 {% for member in team.members|sortasc:'name' %}
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img src="{{member.img}}" class="img-responsive img-circle center-block" alt="{{member.name}} picture">
+                        <img src="{{site_root}}{{member.img}}" class="img-responsive img-circle center-block" alt="{{member.name}} picture">
                         <h4>{{member.name}}</H4>
                         <p class="text-muted">{{member.role}}</p>
                         {% if member.social %}
@@ -242,7 +242,7 @@
                         <div class="modal-body">
                             <h2>{{product.name}}</h2>
                             <hr class="star-primary">
-                            <img src="{{product.img}}" class="img-responsive img-centered" alt="{{product.img_alt}}">
+                            <img src="{{site_root}}{{product.img}}" class="img-responsive img-centered" alt="{{product.img_alt}}">
                             <div class="product-modal-description">
                                 {{product|markdown_to_html}}
                             </div>
