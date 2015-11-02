@@ -181,29 +181,17 @@
                     </div>
                     <div class="footer-col col-md-4">
                         <h3>Around the Web</h3>
+                        {% if site.social %}
                         <ul class="list-inline">
                             {% for icon, link in site.social %}
                             <li>
                                 <a href="{{link}}" class="btn-social btn-outline"><i class="fa fa-fw fa-{{icon}}"></i></a>
                             </li>
-                            {% empty %}
-                            <li>
-                                    <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                    <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
-                            </li>
-                            <li>
-                                    <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
-                            </li>
-                            <li>
-                                    <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
-                            </li>
-                            <li>
-                                    <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
-                            </li>
                             {% endfor %}
                         </ul>
+                        {% else %}
+                        <p>TBD</p>
+                        {% endif %}
                     </div>
                 </div>
             </div>
@@ -242,7 +230,7 @@
                         <div class="modal-body">
                             <h2>{{product.name}}</h2>
                             <hr class="star-primary">
-                            <img src="{{site_root}}{{product.img}}" class="img-responsive img-centered" alt="{{product.img_alt}}">
+                            <img src="{{site_root}}{{product.img}}" class="img-responsive img-centered" alt="{{product.name}} picture">
                             <div class="product-modal-description">
                                 {{product|markdown_to_html}}
                             </div>
