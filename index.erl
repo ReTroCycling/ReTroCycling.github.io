@@ -12,8 +12,8 @@ site(Data) ->
       "site/index.html" =>
           {template, "templates/index.html",
            #{site_root => ""}},
-      "site/img/*.png" =>
-          {files, "assets/img/*.png"},
+      "site/img/logo/reTROcylcing-logo.png" =>
+          {file, "assets/img/logo/reTROcylcing-logo.png"},
       "site/img/products/*.png" =>
           {files, "assets/img/products/*.png"},
       "site/img/team/*.png" =>
