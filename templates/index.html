@@ -142,7 +142,11 @@
             </div>
             <div class="row">
                 {% for member in team.members|sortasc:'name' %}
+                {% if not forloop.counter|divisibleby:2 %}
+                <div class="col-sm-4 col-sm-offset-2">
+                {% else %}
                 <div class="col-sm-4">
+                {% endif %}
                     <div class="team-member">
                         <img src="{{site_root}}{{member.img}}" class="img-responsive img-circle center-block" alt="{{member.name}} picture">
                         <h4>{{member.name}}</H4>
